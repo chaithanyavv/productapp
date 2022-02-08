@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using (Html.BeginForm("addproduct1", "product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <form>
+        <Table>
+            <tr>
+
+                <td><br />Product Name :</td>
+                <td><br /><input type="text" name="txt1" /></td>
+
+                <br />
+            </tr>
+            <tr>
+                <td>
+                    Category:
+                </td>
+                <td>
+                    @Html.DropDownList("category", (List<SelectListItem>)ViewBag.de, "Select category")
+                </td>
+            </tr>
+            <tr>
+                <td><br />Price :</td>
+                <td><br /><input type="text" name="txt3" /></td>
+                <br />
+            </tr>
+            <tr>
+                <td><br /> Description :</td>
+                <td><br /><input type="text" name="txt4" /></td>
+                <br />
+            </tr>
+            <br />
+           
+            <tr>
+                <td><br /> Photo :</td>
+                <td><br /><input type="file" name="image" /></td>
+                <br />
+            </tr>
+
+            <tr><br /><td><button>submit</button></td></tr>
+        </Table>
+    </form>
+}

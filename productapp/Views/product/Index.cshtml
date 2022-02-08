@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">productapp</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="product" asp-action="Index">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="product" asp-action="signup">SignUp</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+@using (Html.BeginForm("loginn", "product", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>user name:</td>
+            <td><input type="text" name="us" /></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input type="password" name="ps" /></td>
+        </tr>
+        <tr>
+            <td> <input type="submit" /></td>
+        </tr>
+    </table>
+}

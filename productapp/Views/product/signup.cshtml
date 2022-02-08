@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using (Html.BeginForm("adduser", "product", FormMethod.Post))
+{
+    <form>
+        <Table>
+            <tr>
+
+                <td><br />Name :</td>
+                <td><br /><input type="text" name="txt1" /></td>
+
+                <br />
+            </tr>
+            
+            <br />
+            <tr>
+                <td><br />Place :</td>
+                <td><br /><input type="text" name="txt2" /></td>
+                <br />
+            </tr>
+            <tr>
+                <td><br /> Phone no :</td>
+                <td><br /><input type="text" name="txt3" /></td>
+                <br />
+            </tr>
+            <br />
+            <tr>
+                <td><br /> Email :</td>
+                <td><br /><input type="text" name="txt4" /></td>
+                <br />
+            </tr>
+            <br />
+            <tr>
+                <td><br /> Password :</td>
+                <td><br /><input type="text" name="txt5" /></td>
+                <br />
+            </tr>
+
+            <tr><br /><td><button>submit</button></td></tr>
+        </Table>
+    </form>
+}

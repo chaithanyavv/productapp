@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<table class="table table-bordered">
+    <tr>
+        <th>no:</th>
+        <th>Product name</th>
+        <th>price</th>
+        <th>Description</th>
+        <th>category name</th>
+        <th>photo</th>
+    </tr>
+    <th colspan="1"></th>
+    </tr>
+    @{int i = 0;}
+    @foreach (var a in Model)
+    {
+<tr>
+    @{i++; }
+    <td>
+        @i;
+    </td>
+
+    <td>
+        @a.prduct_name
+    </td>
+    <td>
+        @a.price
+    </td>
+    <td>
+        @a.description
+    </td>
+
+    <td>
+        @a.cat_name
+    </td>
+    <td>
+        <img src="~/images/@a.photo" width="100px" height="100px" />
+    </td>
+    <td>
+        @Html.ActionLink("Add To Cart","addcart", "product", new { id = @a.product_id }, new { @class = "btn btn-danger" })
+
+    </td>
+
+
+</tr>
+    }
+
+</table>
