@@ -19,4 +19,5 @@ namespace productapp.Models
         public user user { get; set; }
 
     }
+    // its a trial
 }
